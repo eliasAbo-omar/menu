@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Rakkas", serif;
+  font-family: "Cairo", serif;
   font-style: normal;
 }
 
@@ -31,6 +31,7 @@ body {
   align-items: center;
   box-shadow: var(--shadow-color);
   padding: 10px;
+  background: white;
 }
 
 .header-container .menu-button {
@@ -148,5 +149,72 @@ body {
 @media (min-width: 1150px) {
   .header-container .menu-button {
     display: none;
+  }
+}
+
+/* =========== home page =========== */
+.home {
+  position: relative;
+}
+
+.home .home-container {
+  min-height: calc(100vh - 120px);
+  margin-top: 120px;
+  padding: 20px 0 0;
+  position: relative;
+  background-image: url(../image/background-home-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+}
+
+.home .home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home .home-content h1 {
+  font-size: 48px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.home .home-content p {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.home .home-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.home .home-content .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .home .home-content h1 {
+    font-size: 35px;
+  }
+
+  .home .home-content p {
+    font-size: 20px;
+  }
+
+  .home .home-content .btn {
+    font-size: 16px;
+    padding: 8px 16px;
   }
 }
