@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
 body,
 html {
   overflow-x: hidden;
@@ -112,6 +122,7 @@ body {
   flex: 1;
   padding: 0;
   margin: 0;
+  padding: 10px 0;
 }
 
 .header-container .nav-bar li a {
@@ -130,7 +141,7 @@ body {
   .header-container .nav-bar {
     flex-direction: column;
     position: absolute;
-    top: -170%;
+    top: -190%;
     left: 0;
     align-items: center;
     width: 100%;
@@ -217,4 +228,113 @@ body {
     font-size: 16px;
     padding: 8px 16px;
   }
+}
+
+/* =========== IMG Menu page =========== */
+
+.img-menu {
+  position: relative;
+}
+
+.img-menu .img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.4;
+  padding: 0 20px;
+}
+
+.img-menu .img-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.img-menu .text-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .img-menu .img-container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .img-menu .text-menu h1 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 769px) {
+  .img-menu .img-container img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .img-menu .text-menu h1 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-menu .img-container img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* =========== Menu page =========== */
+
+.menu {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.menu .container .name-menu {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.menu .container .name-menu h1 {
+  font-size: 36px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.menu .container .menu-container ul {
+  padding: 0;
+  margin: 0;
+}
+
+.menu .container .menu-container ul li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.menu .container .menu-container ul li:after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px dotted var(--primary-color);
+  margin: 0 10px;
+  order: 2;
+}
+
+.menu .container .menu-container ul li .item-name {
+  font-size: 24px;
+  color: var(--primary-color);
+  order: 1;
+  font-weight: bold;
+}
+
+.menu .container .menu-container ul li .item-price {
+  font-size: 22px;
+  color: var(--primary-color);
+  order: 3;
+  font-weight: bold;
 }
