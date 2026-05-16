@@ -28,6 +28,7 @@ html {
 body {
   font-family: "Cairo", serif;
   font-style: normal;
+  background-color: rgb(255, 248, 235);
 }
 
 /* =========== Header =========== */
@@ -298,16 +299,16 @@ body {
 
 .menu::before {
   content: "";
-  background-image: url(../image/kabsh.png);
-  background-size: contain;
+  background-image: url(/assets/image/lunch-img.png);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.3;
   position: absolute;
-  top: 0;
+  top: 170px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 65%;
   z-index: -1;
 }
 
@@ -322,18 +323,18 @@ body {
   font-weight: bold;
 }
 
-.menu .container .menu-container ul {
+.menu .container ul {
   padding: 0;
   margin: 0;
 }
 
-.menu .container .menu-container ul li {
+.menu .container ul li {
   display: flex;
   align-items: baseline;
   margin-bottom: 20px;
 }
 
-.menu .container .menu-container ul li:after {
+.menu .container ul li:after {
   content: "";
   flex: 1;
   border-bottom: 2px dotted var(--primary-color);
@@ -341,16 +342,207 @@ body {
   order: 2;
 }
 
-.menu .container .menu-container ul li .item-name {
+.menu .container ul li .item-name {
   font-size: 24px;
   color: var(--primary-color);
   order: 1;
   font-weight: bold;
 }
 
-.menu .container .menu-container ul li .item-price {
+.menu .container ul li .item-price {
   font-size: 22px;
   color: var(--primary-color);
   order: 3;
   font-weight: bold;
+}
+
+/* =========== Sweet Menu page =========== */
+
+.sweet-menu {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.sweet-menu::before {
+  content: "";
+  background-image: url(../image/sweet-img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  position: absolute;
+  top: 170px;
+  left: 0;
+  width: 100%;
+  height: 68%;
+  z-index: -1;
+}
+
+.sweet-menu .container .name-menu {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sweet-menu .container .name-menu h1 {
+  font-size: 36px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.sweet-menu .container ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sweet-menu .container ul li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.sweet-menu .container ul li:after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px dotted var(--primary-color);
+  margin: 0 10px;
+  order: 2;
+}
+
+.sweet-menu .container ul li .item-name {
+  font-size: 24px;
+  color: var(--primary-color);
+  order: 1;
+  font-weight: bold;
+}
+
+.sweet-menu .container ul li .item-price {
+  font-size: 22px;
+  color: var(--primary-color);
+  order: 3;
+  font-weight: bold;
+}
+
+/* =========== Drinks Menu page =========== */
+
+.drinks-menu {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.drinks-menu::before {
+  content: "";
+  background-image: url(../image/drinks-img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  position: absolute;
+  top: 170px;
+  left: 0;
+  width: 100%;
+  height: 68%;
+  z-index: -1;
+}
+
+.drinks-menu .container .name-menu {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.drinks-menu .container .name-menu h1 {
+  font-size: 36px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.drinks-menu .container ul {
+  padding: 0;
+  margin: 0;
+}
+
+.drinks-menu .container ul li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.drinks-menu .container ul li:after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px dotted var(--primary-color);
+  margin: 0 10px;
+  order: 2;
+}
+
+.drinks-menu .container ul li .item-name {
+  font-size: 24px;
+  color: var(--primary-color);
+  order: 1;
+  font-weight: bold;
+}
+
+.drinks-menu .container ul li .item-price {
+  font-size: 22px;
+  color: var(--primary-color);
+  order: 3;
+  font-weight: bold;
+}
+
+/* =========== Contact Menu page =========== */
+
+.contact-menu {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.contact-menu .container .name-menu {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-menu .container .name-menu h1 {
+  font-size: 36px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.contact-menu .container .contact-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-menu .container .contact-info p {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.contact-menu .container .contact-info a {
+  font-size: 22px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-menu .container .contact-info p:hover,
+.contact-menu .container .contact-info p:hover a {
+  transform: translateY(-5px);
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .contact-menu .container .contact-info p {
+    font-size: 20px;
+  }
+
+  .contact-menu .container .contact-info a {
+    font-size: 18px;
+  }
 }
